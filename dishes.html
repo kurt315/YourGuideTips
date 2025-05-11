@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filipino Dishes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Filipino Dishes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dish-list">
+      <!-- Loop through the dishes using JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Filipino Dishes. All rights reserved.</p>
+  </footer>
+
+  <!-- Dish data and JS logic -->
+  <script src="dishes.js"></script>
+  <script>
+    const dishList = document.querySelector('.dish-list');
+    dishes.forEach(dish => {
+      const dishItem = document.createElement('div');
+      dishItem.classList.add('dish-item');
+      
+      dishItem.innerHTML = `
+        <img src="${dish.image}" alt="${dish.name}">
+        <h2>${dish.name}</h2>
+        <p><strong>Ingredients:</strong> ${dish.ingredients}</p>
+        <p><strong>Cooking Instructions:</strong> ${dish.instructions}</p>
+        <p><strong>History:</strong> ${dish.history}</p>
+      `;
+      dishList.appendChild(dishItem);
+    });
+  </script>
+</body>
+</html>

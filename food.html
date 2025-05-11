@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Dishes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Filipino Food Dishes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dish-list">
+      <!-- Dishes will be loaded here -->
+    </div>
+
+    <section id="culinary-tips" class="tips-section">
+      <h2>🍽️ Culinary Tips</h2>
+      <ul class="tips-list">
+        <li><strong>Marinate Overnight:</strong> Para mas malasa ang Adobo o BBQ, i-marinate ito overnight sa ref.</li>
+        <li><strong>Don’t Stir Sinigang Right Away:</strong> Hayaan munang kumulo bago haluin para hindi masira ang gulay.</li>
+        <li><strong>Use Banana Leaf:</strong> Gumamit ng dahon ng saging as a liner for grilled dishes for extra aroma.</li>
+        <li><strong>Deglaze With Vinegar:</strong> Sa mga lutong may suka (like paksiw), wag haluin hangga't hindi kumukulo para di maasim ang lasa.</li>
+        <li><strong>Soften Taro Leaves:</strong> Para iwas kati sa Laing, patuyuin muna ang gabi leaves o ibabad sa mainit na tubig.</li>
+        <li><strong>Proper Rice-Water Ratio:</strong> Para sa Arroz Caldo, 1 cup malagkit rice : 5 cups broth ang ideal for perfect thickness.</li>
+        <li><strong>Use Annatto Oil:</strong> Pampakulay at pampalasa sa Kare-Kare without changing flavor too much.</li>
+        <li><strong>Sear Pork for Crunch:</strong> Sa Lechon Kawali, tiyaking completely dry ang balat bago i-prito for crispy finish.</li>
+        <li><strong>Simmer Munggo Slowly:</strong> Masarap ang Ginisang Munggo kapag pinakuluan sa low heat hanggang malambot at creamy.</li>
+        <li><strong>Balance Flavors:</strong> Laging i-taste test at i-balanse ang alat, asim, at tamis — yan ang sikreto ng lutong Pinoy!</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Awesome Blog. All rights reserved.</p>
+  </footer>
+
+  <script src="dishes.js"></script>
+  <script>
+    const dishList = document.querySelector('.dish-list');
+    dishes.forEach(dish => {
+      const dishItem = document.createElement('div');
+      dishItem.classList.add('dish-item');
+      
+      dishItem.innerHTML = `
+        <img src="${dish.image}" alt="${dish.name}">
+        <h2>${dish.name}</h2>
+        <p><strong>Ingredients:</strong> ${dish.ingredients}</p>
+        <p><strong>Instructions:</strong> ${dish.instructions}</p>
+        <p><strong>History:</strong> ${dish.history}</p>
+      `;
+      dishList.appendChild(dishItem);
+    });
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.dish-item').forEach(item => {
+      observer.observe(item);
+    });
+  </script>
+</body>
+</html>

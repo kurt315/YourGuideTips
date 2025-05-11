@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entertainment Buzz</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Navigation Styling */
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      background-color: #007bff;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover Effect for Links */
+    nav a:hover {
+      background-color: #0056b3;
+      opacity: 0.8;
+    }
+
+    /* Responsive Design for Small Screens */
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 1rem;
+        padding: 8px 15px;
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+</body>
+</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entertainment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.ent-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+<body>
+  <header>
+    <h1>Entertainment Buzz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+    <nav>
+  <a href="music.html#music-section">Go to Music Section</a>
+
+</nav>
+
+  </header>
+
+  <main>
+    <section class="entertainment-section">
+      <h2>🎬 Trending Now in Entertainment</h2>
+      <div class="entertainment-cards">
+
+        <!-- Card 1 -->
+        <div class="ent-card">
+          <img src="img./celebrity1.jpg" alt="Jane De Leon">
+          <h3>Jane De Leon to Star in Action Series</h3>
+          <p>Bagong teleserye ni Jane, punong-puno ng aksyon at drama. Abangan sa Kapamilya Channel!</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ent-card">
+          <img src="img/concert.jpg" alt="SB19 Concert">
+          <h3>SB19 Live in Manila this August</h3>
+          <p>Huwag palampasin ang world-class concert ng SB19! Tickets out now!</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ent-card">
+          <img src="img/movie.jpg" alt="Indie Film">
+          <h3>'Balikbayan' Wins Best Indie Film</h3>
+          <p>Pinoy indie film na tumabo sa local film fest at kinilala sa abroad.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="ent-card">
+          <img src="img/ivana.jpg" alt="Ivana Alawi">
+          <h3>Ivana Alawi Launches Vlog Series</h3>
+          <p>Mas personal na Ivana ang mapapanood mo sa kanyang bagong docu-style vlog series.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="ent-card">
+          <img src="img/alden.jpg" alt="Alden Richards">
+          <h3>Alden Returns to Primetime Drama</h3>
+          <p>Heartwarming family drama ang pagbabalik-serye ni Alden Richards ngayong taon.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="ent-card">
+          <img src="img/youtube.jpg" alt="YouTube Star">
+          <h3>New YouTube Duo Breaks 1M Subs in 2 Months</h3>
+          <p>Ang tandem nila “Lodi & Pards” viral agad sa comedy pranks at kwelang challenges.</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="ent-card">
+          <img src="img/kpop.jpg" alt="KPOP Event">
+          <h3>Manila K-POP Fest 2025: Full Lineup Announced</h3>
+          <p>EXO, NewJeans, and more! K-POP fest magaganap sa MOA Arena this September.</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="ent-card">
+          <img src="img/netflix.jpg" alt="Netflix Series">
+          <h3>Pinoy Crime Series Enters Netflix Top 10</h3>
+          <p>"Itim na Lihim" pasok sa global trending list ng Netflix ngayong buwan!</p>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="ent-card">
+          <img src="img/vice.jpg" alt="Vice Ganda">
+          <h3>Vice Ganda Hosts New Game Show</h3>
+          <p>Puno ng katatawanan ang bagong primetime game show ni Meme Vice!</p>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="ent-card">
+          <img src="img/festival.jpg" alt="Music Festival">
+          <h3>Pinas Music Festival 2025 Set to Rock Tagaytay</h3>
+          <p>3-day music fest featuring 50+ OPM artists — camping, food fair, and more!</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Awesome Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
